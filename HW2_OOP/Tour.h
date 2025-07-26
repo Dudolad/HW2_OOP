@@ -8,9 +8,9 @@ class Tour
 private:
 	char* m_name;
 	char* m_destination;
-	float m_ricePerDay;
+	float m_pricePerDay;
 	int m_days;
-	char m_meals;
+	char* m_meals;
 	float m_transportCost;
 public:
 	Tour();
