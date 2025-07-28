@@ -19,51 +19,84 @@ Tour::Tour()
 
 Tour::Tour(const char* name, const char* destination, float pricePerDay, int days, const char* meals, float transportCost)
 {
+    m_name = copyStr(name);
+    m_destination = copyStr(destination);
+    m_meals = copyStr(meals);
+    m_pricePerDay = pricePerDay;
+    m_days = days;
+    m_transportCost = transportCost;
 }
 
 Tour::Tour(const Tour& other)
 {
+    m_name = copyStr(other.m_name);
+    m_destination = copyStr(other.m_destination);
+    m_meals = copyStr(other.m_meals);
+    m_pricePerDay = other.m_pricePerDay;
+    m_days = other.m_days;
+    m_transportCost = other.m_transportCost;
 }
 
 Tour& Tour::operator=(const Tour& other)
 {
-    // TODO: insert return statement here
+    if (this != &other) {
+        delete[] m_name;
+        delete[] m_destination;
+        delete[] m_meals;
+
+        m_name = copyStr(other.m_name);
+        m_destination = copyStr(other.m_destination);
+        m_meals = copyStr(other.m_meals);
+        m_pricePerDay = other.m_pricePerDay;
+        m_days = other.m_days;
+        m_transportCost = other.m_transportCost;
+    }
+    return *this;
 }
 
 Tour::~Tour()
 {
+    delete[] m_name;
+    delete[] m_destination;
+    delete[] m_meals;
 }
 
 const char* Tour::getName() const
 {
-    return nullptr;
+    return m_name;
 }
 
 const char* Tour::getDestination() const
 {
-    return nullptr;
+    return m_destination;
 }
 
 float Tour::getPricePerDay() const
 {
-    return 0.0f;
+    return m_pricePerDay;;
 }
 
 int Tour::getDays() const
 {
-    return 0;
+    return m_days;
 }
 
 const char* Tour::getMeals() const
 {
-    return nullptr;
+    return m_meals;
 }
 
 float Tour::getTransportCost() const
 {
-    return 0.0f;
+    return m_transportCost;
 }
 
 void Tour::showInfo() const
 {
+    cout << "Tour Name: " << m_name << endl;
+    cout << "Destination: " << m_destination << endl;
+    cout << "Price per day: " << m_pricePerDay << " UAH" << endl;
+    cout << "Days: " << m_days << endl;
+    cout << "Meals: " << m_meals << endl;
+    cout << "Transport cost: " << m_transportCost << " UAH" << endl;
 }
