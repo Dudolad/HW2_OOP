@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="HW2_OOP.cpp" />
     <ClCompile Include="Tour.cpp" />
+    <ClCompile Include="TourAgency.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tour.h" />
+    <ClInclude Include="TourAgency.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

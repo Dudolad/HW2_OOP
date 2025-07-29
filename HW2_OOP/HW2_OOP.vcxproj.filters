@@ -21,9 +21,15 @@
     <ClCompile Include="Tour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TourAgency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TourAgency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
