@@ -12,7 +12,7 @@ public:
 	void addTour(const Tour& tour);
 	void showAllTours() const;
 	void deleteTourByName(const char* name);
-	void searchByDesination(const char* destination) const;
+	void searchByDestination(const char* destination) const;
 	void sortByDestination();
 	void sortByTransportCost();
 

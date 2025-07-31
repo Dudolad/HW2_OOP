@@ -67,7 +67,7 @@ void TourAgency::deleteTourByName(const char* name)
 	cout << "Tour deleted successfully.\n";
 }
 
-void TourAgency::searchByDesination(const char* destination) const
+void TourAgency::searchByDestination(const char* destination) const
 {
 	bool found = false;
 	for (int i = 0; i < m_size; i++) {
